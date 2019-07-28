@@ -1,1 +1,14 @@
+*.log
+*.iml
+*.ipr
+*.iws
 .idea
+
+project/target
+project/project
+
+.cache/
+.history/
+.lib/
+dist/*
+target/

@@ -1,4 +1,9 @@
-import akka.actor.{ Actor, ActorLogging, Props }
+import java.io.File
+
+import akka.actor.{Actor, ActorLogging, Props}
+import akka.http.scaladsl.server.directives.FileInfo
+
+import akka.http.scaladsl.server.Directives._
 
 object VideoUploadRegistryActor {
   final case class ActionPerformed(description: String)
@@ -15,6 +20,5 @@ class VideoUploadRegistryActor extends Actor with ActorLogging {
     case UploadVideo() =>
       sender() ! ActionPerformed(s"Video upoaded successfully.")
   }
-
 
 }
